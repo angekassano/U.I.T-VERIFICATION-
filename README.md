@@ -95,7 +95,21 @@ promotion:"Alpha 2026"
 nom:"leon vp",
 grade:"Soldat",
 promotion:"Promotion 2026"
+},const soldatsValides = {
+
+"UIT-2026-001":{
+nom:"Kassano Ange",
+grade:"Soldat",
+promotion:"2026"
 },
+
+"UIT-2026-002":{
+nom:"MR Ritchy",
+grade:"Caporal",
+promotion:"2026"
+}
+
+};
 function verifier(){
 
 let matricule =
