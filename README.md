@@ -71,6 +71,7 @@ Vérifier
 
 <script>
 
+<script>
 const soldatsValides = {
     "Kassano Ange": {
         nom: "Kassano Ange",
@@ -82,25 +83,40 @@ const soldatsValides = {
         grade: "Caporal",
         promotion: "2026"
     }
-
+    
 };
-function verifier(){
 
-let matricule =
-document.getElementById("matricule")
-.value.toUpperCase();
+function verifier() {
+    const input = document.getElementById("nom").value.trim();  
+    const resultDiv = document.getElementById("result");
 
-let result =
-document.getElementById("result");
+    
+    resultDiv.innerHTML = "";
 
-if(soldatsValides[matricule]){
+    if (!input) {
+        resultDiv.innerHTML = `<p style="color: orange;">⚠️ Veuillez entrer un nom</p>`;
+        return;
+    }
 
-let s = soldatsValides[matricule];
+    const soldat = soldatsValides[input];
 
-result.innerHTML = `
-<div style="color:lime">
-✅ FORMATION VALIDÉE
-</div>
+    if (soldat) {
+        resultDiv.innerHTML = `
+            <p style="color: green; font-weight: bold;">
+                ✅ Valide - Formation terminée<br><br>
+                Nom : ${soldat.nom}<br>
+                Grade : ${soldat.grade}<br>
+                Promotion : ${soldat.promotion}
+            </p>`;
+    } else {
+        resultDiv.innerHTML = `
+            <p style="color: red; font-weight: bold;">
+                ❌ Non trouvé<br><br>
+                Le nom <strong>"${input}"</strong> n'a pas fait la formation ou n'existe pas dans la liste.
+            </p>`;
+    }
+}
+</script>
 
 <br>
 
