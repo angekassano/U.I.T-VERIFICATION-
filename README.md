@@ -85,6 +85,12 @@ promotion:"Bravo 2026"
 }
 };
 
+"Moubarak stone":{
+nom:"moubarak stone ",
+grade:"rang 3",
+promotion:"Alpha 2026"
+},
+
 function verifier(){
 
 let matricule =
