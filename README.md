@@ -72,42 +72,20 @@ Vérifier
 <script>
 
 const soldatsValides = {
-"moubarak stone":{
-nom:"moubarak stone",
-grade:"Soldat",
-promotion:"Alpha 2026"
-},
 
-"UIT-2026-002":{
-nom:"Mike Brown",
-grade:"Caporal",
-promotion:"Bravo 2026"
-}
-};
-
-"UIT-2026-003":{
-nom:"moubarak stone ",
-grade:"rang 3",
-promotion:"Alpha 2026"
-},
-
-"UIT-2026-004":{
-nom:"leon vp",
-grade:"Soldat",
-promotion:"Promotion 2026"
-},const soldatsValides = {
-
-"UIT-2026-001":{
+"Kassano Ange":{
 nom:"Kassano Ange",
 grade:"Soldat",
 promotion:"2026"
 },
 
-"UIT-2026-002":{
+"Mr Ritchy":{
 nom:"MR Ritchy",
 grade:"Caporal",
 promotion:"2026"
 }
+
+};
 
 };
 function verifier(){
