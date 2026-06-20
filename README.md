@@ -37,8 +37,12 @@ const soldatsValides = {
         grade: "Caporal",
         promotion: "2026",
         statut: "FORMATION TERMINÉE"
-    }
-    // Ajoute d'autres soldats ici
+    },
+    "moubarak stone": {
+        nom: "moubarak stone",
+        grade: "rang3",
+        promotion: "2026",
+        statut: "FORMATION TERMINÉE"
 };
 
 function verifier() {
