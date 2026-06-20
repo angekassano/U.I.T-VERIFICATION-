@@ -1,66 +1,61 @@
-<!-- === U.I.T VERIFICATION PLATFORM - DESIGN PRO === -->
-<div style="max-width: 900px; margin: 30px auto; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #e0e0e0; background: #0f0f0f; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+<!-- U.I.T - DESIGN PREMIUM 2027 -->
+<div style="max-width: 920px; margin: 40px auto; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: linear-gradient(180deg, #0a0a0a, #1a1a1a); color: #e0e0e0; padding: 40px 30px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 200, 120, 0.15); border: 1px solid #00c080;">
 
-  <!-- Logo + En-tête -->
-  <div style="text-align: center; margin-bottom: 35px;">
-    <img src="<img width="1500" height="2235" alt="image" src="https://github.com/user-attachments/assets/bbebe01a-0a23-417b-9f23-b653446d17a2" />
-" alt="U.I.T Logo" 
-         style="max-width: 360px; border-radius: 8px; box-shadow: 0 0 25px rgba(0, 180, 120, 0.3);">
-    <h1 style="color: #00c080; margin: 15px 0 8px 0; font-size: 28px; font-weight: 600; letter-spacing: 1px;">UNITÉ D'INTRUSION TACTIQUE</h1>
-    <p style="color: #888; font-size: 15px;">ARMÉE GLENDALE • Plateforme de Vérification Sécurisée</p>
+  <!-- En-tête stylé sans image -->
+  <div style="text-align: center; margin-bottom: 45px; position: relative;">
+    <div style="font-size: 52px; font-weight: 900; letter-spacing: 8px; background: linear-gradient(90deg, #00ffaa, #00cc88); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 40px rgba(0, 255, 170, 0.5);">U.I.T</div>
+    <div style="color: #00c080; font-size: 15px; letter-spacing: 4px; margin-top: -8px; font-weight: 500;">UNITÉ D'INTRUSION TACTIQUE</div>
+    <div style="color: #666; font-size: 13px; margin-top: 8px;">ARMÉE GLENDALE • SYSTÈME DE VÉRIFICATION TACTIQUE</div>
   </div>
 
-  <!-- Vérification -->
-  <div style="background: #1a1a1a; border-radius: 12px; padding: 35px; border: 1px solid #2a2a2a; margin-bottom: 30px;">
-    <h2 style="color: #00c080; text-align: center; margin-bottom: 25px; font-size: 22px;">Vérification de Formation</h2>
+  <!-- Section Vérification -->
+  <div style="background: rgba(20, 20, 20, 0.95); border-radius: 16px; padding: 40px; border: 1px solid rgba(0, 192, 128, 0.3); margin-bottom: 35px; box-shadow: inset 0 0 30px rgba(0,0,0,0.6);">
+    <h2 style="text-align: center; color: #00ffaa; margin-bottom: 30px; font-size: 24px; font-weight: 600;">VÉRIFICATION DE FORMATION</h2>
     
-    <input type="text" id="nom" placeholder="Entrez le nom complet du soldat" 
-           style="width: 100%; padding: 18px; background: #252525; border: 1px solid #00c080; color: white; font-size: 17px; border-radius: 8px; margin-bottom: 20px; outline: none;">
+    <input type="text" id="nom" placeholder="NOM COMPLET DU SOLDAT" 
+           style="width: 100%; padding: 20px; font-size: 18px; background: #111; border: 2px solid #00c080; color: white; border-radius: 12px; margin-bottom: 20px; outline: none; transition: all 0.3s;">
     
     <button onclick="verifier()" 
-            style="width: 100%; padding: 18px; background: #00c080; color: #000; font-weight: 700; font-size: 17px; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+            style="width: 100%; padding: 20px; background: linear-gradient(90deg, #00ffaa, #00cc77); color: #000; font-size: 18px; font-weight: 700; border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 8px 25px rgba(0, 255, 170, 0.3); transition: all 0.3s;">
             VÉRIFIER L'ACCÈS
     </button>
     
-    <div id="result" style="margin-top: 30px; min-height: 160px;"></div>
+    <div id="result" style="margin-top: 35px; min-height: 180px;"></div>
   </div>
 
   <!-- Bouton Admin -->
-  <div style="text-align: center; margin: 20px 0;">
+  <div style="text-align: center;">
     <button onclick="demanderMotDePasse()" 
-            style="background: #1f1f1f; color: #ffd700; padding: 12px 32px; border: 1px solid #ffd700; border-radius: 8px; cursor: pointer; font-size: 15px;">
-            🔐 Accès Administration
+            style="background: rgba(30,30,30,0.9); color: #ffcc00; padding: 14px 40px; border: 2px solid #ffcc00; border-radius: 50px; cursor: pointer; font-size: 16px; font-weight: 600; box-shadow: 0 5px 20px rgba(255, 200, 0, 0.2);">
+            🔐 ADMINISTRATION
     </button>
   </div>
 
   <!-- Panneau Admin -->
-  <div id="adminPanel" style="display: none; background: #1a1a1a; border-radius: 12px; padding: 35px; border: 1px solid #ffd700;">
-    <h2 style="color: #ffd700; text-align: center; margin-bottom: 25px;">Administration U.I.T</h2>
+  <div id="adminPanel" style="display: none; margin-top: 40px; background: rgba(20,20,20,0.98); border-radius: 16px; padding: 40px; border: 1px solid #ffcc00;">
+    <h2 style="color: #ffcc00; text-align: center; margin-bottom: 30px;">Administration U.I.T</h2>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 25px;">
-      <input type="text" id="newNom" placeholder="Nom complet" style="padding: 14px; background: #252525; border: 1px solid #ffd700; color: white; border-radius: 8px;">
-      <input type="text" id="newGrade" placeholder="Grade" style="padding: 14px; background: #252525; border: 1px solid #ffd700; color: white; border-radius: 8px;">
-      <input type="text" id="newPromo" placeholder="Promotion" style="padding: 14px; background: #252525; border: 1px solid #ffd700; color: white; border-radius: 8px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-bottom: 30px;">
+      <input type="text" id="newNom" placeholder="Nom complet" style="padding: 16px; background: #111; border: 1px solid #ffcc00; color: white; border-radius: 10px;">
+      <input type="text" id="newGrade" placeholder="Grade" style="padding: 16px; background: #111; border: 1px solid #ffcc00; color: white; border-radius: 10px;">
+      <input type="text" id="newPromo" placeholder="Promotion" style="padding: 16px; background: #111; border: 1px solid #ffcc00; color: white; border-radius: 10px;">
     </div>
     
-    <button onclick="ajouterSoldat()" 
-            style="width: 100%; padding: 16px; background: #ffd700; color: #000; font-weight: 700; border: none; border-radius: 8px; margin-bottom: 25px; cursor: pointer;">
-            ➕ Ajouter le Soldat
-    </button>
+    <button onclick="ajouterSoldat()" style="width: 100%; padding: 18px; background: #ffcc00; color: #000; font-weight: 700; border: none; border-radius: 12px; margin-bottom: 30px; cursor: pointer;">➕ AJOUTER SOLDAT</button>
 
-    <h3 style="color: #ffd700; margin-bottom: 12px;">Soldats Enregistrés</h3>
-    <div id="listeSoldats" style="background: #252525; padding: 20px; border-radius: 8px; max-height: 380px; overflow-y: auto; border: 1px solid #444;"></div>
+    <h3 style="color: #ffcc00; margin-bottom: 15px;">Soldats Enregistrés</h3>
+    <div id="listeSoldats" style="background: #111; padding: 20px; border-radius: 12px; max-height: 400px; overflow-y: auto; border: 1px solid #333;"></div>
 
-    <div style="margin-top: 25px; text-align: center; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-      <button onclick="sauvegarder()" style="background:#00c080; color:#000; padding:12px 28px; border:none; border-radius:8px; cursor:pointer;">💾 Sauvegarder</button>
-      <button onclick="resetData()" style="background:#d32f2f; color:white; padding:12px 28px; border:none; border-radius:8px; cursor:pointer;">🗑️ Réinitialiser</button>
-      <button onclick="fermerAdmin()" style="background:#555; color:white; padding:12px 28px; border:none; border-radius:8px; cursor:pointer;">Fermer</button>
+    <div style="margin-top: 35px; text-align: center; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+      <button onclick="sauvegarder()" style="background:#00ffaa; color:#000; padding:14px 30px; border:none; border-radius:50px; cursor:pointer;">💾 Sauvegarder</button>
+      <button onclick="resetData()" style="background:#d32f2f; color:white; padding:14px 30px; border:none; border-radius:50px; cursor:pointer;">🗑️ Réinitialiser</button>
+      <button onclick="fermerAdmin()" style="background:#555; color:white; padding:14px 30px; border:none; border-radius:50px; cursor:pointer;">Fermer</button>
     </div>
   </div>
 </div>
 
 <script>
-// Données
+// === DONNÉES ===
 let soldatsValides = JSON.parse(localStorage.getItem('soldatsValides')) || {
   "Kassano Ange": { nom: "Kassano Ange", grade: "Soldat", promotion: "2026" },
   "Mr Ritchy": { nom: "Mr Ritchy", grade: "Caporal", promotion: "2026" }
@@ -68,14 +63,14 @@ let soldatsValides = JSON.parse(localStorage.getItem('soldatsValides')) || {
 
 const PASSWORD = "Kassano@10";
 
-// Fonctions Admin
+// === ADMIN ===
 function demanderMotDePasse() {
-  const mdp = prompt("🔐 Entrez le mot de passe administrateur :");
+  const mdp = prompt("🔐 Mot de passe Administration :");
   if (mdp === PASSWORD) {
     document.getElementById("adminPanel").style.display = "block";
     afficherListe();
   } else {
-    alert("❌ Mot de passe incorrect.");
+    alert("❌ Mot de passe incorrect");
   }
 }
 
@@ -89,23 +84,23 @@ function afficherListe() {
   Object.keys(soldatsValides).forEach(nom => {
     const s = soldatsValides[nom];
     const item = document.createElement("div");
-    item.style = "padding: 14px; background: #1f1f1f; margin-bottom: 8px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;";
+    item.style = "padding: 16px; background: #1a1a1a; margin-bottom: 10px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center;";
     item.innerHTML = `
       <span><strong>${s.nom}</strong> — ${s.grade} (${s.promotion})</span>
-      <button onclick="supprimerSoldat('${nom}')" style="background:#d32f2f; color:white; border:none; padding:6px 14px; border-radius:6px; cursor:pointer;">Supprimer</button>
+      <button onclick="supprimerSoldat('${nom}')" style="background:#d32f2f;color:white;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;">Supprimer</button>
     `;
     div.appendChild(item);
   });
 }
 
-// Vérification
+// === VÉRIFICATION ===
 function verifier() {
   const input = document.getElementById("nom").value.trim();
   const result = document.getElementById("result");
   result.innerHTML = "";
 
   if (!input) {
-    result.innerHTML = `<p style="color:#ffaa00; text-align:center; font-size:16px;">⚠️ Veuillez entrer un nom complet</p>`;
+    result.innerHTML = `<p style="color:#ffcc00; text-align:center; font-size:17px;">⚠️ Veuillez entrer un nom</p>`;
     return;
   }
 
@@ -113,28 +108,26 @@ function verifier() {
 
   if (soldat) {
     result.innerHTML = `
-      <div style="background: rgba(0, 192, 128, 0.15); border: 2px solid #00c080; padding: 28px; border-radius: 12px; text-align: center;">
-        <h2 style="color: #00c080; margin: 0 0 16px 0;">✅ ACCÈS AUTORISÉ</h2>
-        <p style="font-size: 20px; margin: 12px 0;"><strong>${soldat.nom}</strong></p>
-        <p style="font-size: 16px;">Grade : ${soldat.grade}<br>Promotion : ${soldat.promotion}</p>
+      <div style="background: rgba(0, 255, 170, 0.12); border: 2px solid #00ffaa; padding: 35px; border-radius: 16px; text-align: center;">
+        <h2 style="color: #00ffaa; margin: 0 0 20px 0; font-size: 28px;">✅ ACCÈS AUTORISÉ</h2>
+        <p style="font-size: 22px; margin: 15px 0;"><strong>${soldat.nom}</strong></p>
+        <p style="font-size: 17px;">Grade : ${soldat.grade}<br>Promotion : ${soldat.promotion}</p>
       </div>`;
   } else {
     result.innerHTML = `
-      <div style="background: rgba(211, 47, 47, 0.15); border: 2px solid #d32f2f; padding: 28px; border-radius: 12px; text-align: center;">
-        <h2 style="color: #d32f2f; margin: 0 0 16px 0;">❌ ACCÈS REFUSÉ</h2>
-        <p style="color: #ff7777;">"${input}" n'est pas enregistré ou n'a pas validé la formation.</p>
+      <div style="background: rgba(211, 47, 47, 0.12); border: 2px solid #d32f2f; padding: 35px; border-radius: 16px; text-align: center;">
+        <h2 style="color: #d32f2f; margin: 0 0 20px 0; font-size: 28px;">❌ ACCÈS REFUSÉ</h2>
+        <p style="color: #ff7777; font-size: 17px;">"${input}" non reconnu</p>
       </div>`;
   }
 }
 
-// Ajout / Suppression
+// === Autres fonctions (ajouter, supprimer, etc.) ===
 function ajouterSoldat() {
   const nom = document.getElementById("newNom").value.trim();
   const grade = document.getElementById("newGrade").value.trim() || "Soldat";
   const promo = document.getElementById("newPromo").value.trim() || "2026";
-
-  if (!nom) return alert("Le nom est obligatoire");
-  
+  if (!nom) return alert("Nom obligatoire");
   soldatsValides[nom] = { nom, grade, promotion: promo };
   afficherListe();
   document.getElementById("newNom").value = "";
@@ -151,11 +144,11 @@ function supprimerSoldat(nom) {
 
 function sauvegarder() {
   localStorage.setItem('soldatsValides', JSON.stringify(soldatsValides));
-  alert("✅ Données sauvegardées");
+  alert("💾 Sauvegardé avec succès");
 }
 
 function resetData() {
-  if (confirm("Tout supprimer ? Action irréversible.")) {
+  if (confirm("Tout effacer ?")) {
     localStorage.removeItem('soldatsValides');
     soldatsValides = {};
     afficherListe();
