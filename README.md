@@ -37,7 +37,7 @@ const soldatsValides = {
         grade: "Caporal",
         promotion: "2026",
         statut: "FORMATION TERMINÉE"
-    },
+    }
     "moubarak stone": {
         nom: "moubarak stone",
         grade: "rang3",
