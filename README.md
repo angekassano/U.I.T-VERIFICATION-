@@ -1,100 +1,54 @@
-# U.I.T-VERIFICATION-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vérification U.I.T</title>
+<!-- === SECTION VÉRIFICATION U.I.T === -->
+<div style="background: #0a0a0a; border: 2px solid #4a4a4a; padding: 25px; max-width: 600px; margin: 20px auto; border-radius: 8px; box-shadow: 0 0 20px rgba(0, 255, 100, 0.1); font-family: 'Courier New', monospace;">
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2 style="color: #00ff80; margin: 0; letter-spacing: 3px; text-shadow: 0 0 10px #00ff80;">
+            U.I.T — UNITÉ D'INTRUSION TACTIQUE
+        </h2>
+        <p style="color: #888; font-size: 14px; margin: 5px 0;">ARMÉE GLENDALE • VÉRIFICATION FORMATION</p>
+    </div>
 
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:50px;
-}
+    <div style="margin-bottom: 15px;">
+        <label style="color: #00ff80; font-size: 14px; display: block; margin-bottom: 5px;">NOM DU SOLDAT</label>
+        <input type="text" id="nom" 
+               placeholder="Ex: Kassano Ange" 
+               style="width: 100%; padding: 12px; background: #111; border: 1px solid #00ff80; color: white; font-size: 16px; border-radius: 4px;">
+    </div>
 
-.container{
-    max-width:600px;
-    margin:auto;
-    background:#1c1c1c;
-    padding:30px;
-    border-radius:15px;
-}
+    <button onclick="verifier()" 
+            style="width: 100%; padding: 14px; background: #00ff80; color: black; font-weight: bold; font-size: 16px; border: none; cursor: pointer; border-radius: 4px; letter-spacing: 2px;">
+            VÉRIFIER ACCÈS
+    </button>
 
-input{
-    width:80%;
-    padding:12px;
-    margin:15px 0;
-    border:none;
-    border-radius:8px;
-}
-
-button{
-    padding:12px 25px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    background:gold;
-    font-weight:bold;
-}
-
-#result{
-    margin-top:25px;
-    font-size:22px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>U.I.T</h1>
-<h2>Unité d'Instruction Tactique</h2>
-
-<p>Vérification de fin de formation</p>
-
-<input type="text" id="matricule"
-placeholder="Ex :entrer le nom">
-
-<br>
-
-<button onclick="verifier()">
-Vérifier
-</button>
-
-<div id="result"></div>
-
+    <div id="result" style="margin-top: 20px; min-height: 120px; padding: 15px; border-radius: 4px; font-size: 15px;"></div>
 </div>
 
 <script>
-
-<script>
+// Base de données des soldats validés
 const soldatsValides = {
     "Kassano Ange": {
         nom: "Kassano Ange",
         grade: "Soldat",
-        promotion: "2026"
+        promotion: "2026",
+        statut: "FORMATION TERMINÉE"
     },
     "Mr Ritchy": {
         nom: "Mr Ritchy",
         grade: "Caporal",
-        promotion: "2026"
+        promotion: "2026",
+        statut: "FORMATION TERMINÉE"
     }
-    
+    // Ajoute d'autres soldats ici
 };
 
 function verifier() {
-    const input = document.getElementById("nom").value.trim();  
+    const input = document.getElementById("nom").value.trim();
     const resultDiv = document.getElementById("result");
 
-    
     resultDiv.innerHTML = "";
 
     if (!input) {
-        resultDiv.innerHTML = `<p style="color: orange;">⚠️ Veuillez entrer un nom</p>`;
+        resultDiv.innerHTML = `<p style="color: #ffaa00; text-align:center;">⚠️ VEuillez entrer un nom complet.</p>`;
         return;
     }
 
@@ -102,43 +56,21 @@ function verifier() {
 
     if (soldat) {
         resultDiv.innerHTML = `
-            <p style="color: green; font-weight: bold;">
-                ✅ Valide - Formation terminée<br><br>
-                Nom : ${soldat.nom}<br>
-                Grade : ${soldat.grade}<br>
-                Promotion : ${soldat.promotion}
-            </p>`;
+            <div style="background: rgba(0, 255, 100, 0.1); border: 1px solid #00ff80; padding: 15px; border-radius: 4px; text-align: center;">
+                <h3 style="color: #00ff80; margin: 0 0 10px 0;">✅ ACCÈS AUTORISÉ</h3>
+                <p style="color: #00ff80; font-size: 18px; margin: 10px 0;"><strong>VALIDÉ</strong></p>
+                <p><strong>Nom :</strong> ${soldat.nom}</p>
+                <p><strong>Grade :</strong> ${soldat.grade}</p>
+                <p><strong>Promotion :</strong> ${soldat.promotion}</p>
+                <p style="color: #00ff80;"><strong>${soldat.statut}</strong></p>
+            </div>`;
     } else {
         resultDiv.innerHTML = `
-            <p style="color: red; font-weight: bold;">
-                ❌ Non trouvé<br><br>
-                Le nom <strong>"${input}"</strong> n'a pas fait la formation ou n'existe pas dans la liste.
-            </p>`;
+            <div style="background: rgba(255, 50, 50, 0.1); border: 1px solid #ff3333; padding: 15px; border-radius: 4px; text-align: center;">
+                <h3 style="color: #ff3333; margin: 0 0 10px 0;">❌ ACCÈS REFUSÉ</h3>
+                <p style="color: #ff6666; font-size: 17px;">Nom non reconnu ou formation non validée</p>
+                <p style="color: #ff9999;">"${input}"</p>
+            </div>`;
     }
 }
 </script>
-
-<br>
-
-Nom : ${s.nom}<br>
-Grade : ${s.grade}<br>
-Promotion : ${s.promotion}<br><br>
-
-Lead : Ange Kassano<br>
-Co-Lead : MR Ritchy
-`;
-
-}else{
-
-result.innerHTML = `
-<div style="color:red">
-❌ FORMATION NON VALIDÉE
-</div>
-`;
-}
-
-}
-</script>
-
-</body>
-</html>
