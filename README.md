@@ -72,20 +72,16 @@ Vérifier
 <script>
 
 const soldatsValides = {
-
-"Kassano Ange":{
-nom:"Kassano Ange",
-grade:"Soldat",
-promotion:"2026"
-},
-
-"Mr Ritchy":{
-nom:"MR Ritchy",
-grade:"Caporal",
-promotion:"2026"
-}
-
-};
+    "Kassano Ange": {
+        nom: "Kassano Ange",
+        grade: "Soldat",
+        promotion: "2026"
+    },
+    "Mr Ritchy": {
+        nom: "Mr Ritchy",
+        grade: "Caporal",
+        promotion: "2026"
+    }
 
 };
 function verifier(){
