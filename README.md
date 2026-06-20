@@ -57,7 +57,7 @@ button{
 <p>Vérification de fin de formation</p>
 
 <input type="text" id="matricule"
-placeholder="Ex : UIT-2026-001">
+placeholder="Ex :entrer le nom">
 
 <br>
 
@@ -72,7 +72,7 @@ Vérifier
 <script>
 
 const soldatsValides = {
-"UIT-2026-001":{
+"moubarak stone":{
 nom:"moubarak stone",
 grade:"Soldat",
 promotion:"Alpha 2026"
