@@ -91,6 +91,11 @@ grade:"rang 3",
 promotion:"Alpha 2026"
 },
 
+"UIT-2026-004":{
+nom:"leon vp",
+grade:"Soldat",
+promotion:"Promotion 2026"
+},
 function verifier(){
 
 let matricule =
