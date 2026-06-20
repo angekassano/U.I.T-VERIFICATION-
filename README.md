@@ -73,7 +73,7 @@ Vérifier
 
 const soldatsValides = {
 "UIT-2026-001":{
-nom:"John Walker",
+nom:"moubarak stone",
 grade:"Soldat",
 promotion:"Alpha 2026"
 },
